@@ -1,0 +1,31 @@
+﻿@using WebApplication3.Models
+@model  List<Personel>
+
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+@Html.ActionLink("Personel Ekle","Ekle","Home")
+<h2>Listele</h2>
+
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Ad</td>
+        <td>Soyad</td>
+        <td>Tckn</td>
+        <td>Doğum Tarihi</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Ad</td>
+            <td>@item.Soyad</td>
+            <td>@item.TCKN</td>
+            <td>@item.DogumTarihi</td>
+        </tr>
+    }
+</table>

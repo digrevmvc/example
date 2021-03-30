@@ -1,0 +1,62 @@
+﻿@model WebApplication3.Models.Personel
+
+@{
+    /**/
+
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2>Ekle</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Id, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Id)
+            @Html.ValidationMessageFor(m => m.Id)
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Ad, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Ad)
+            @Html.ValidationMessageFor(m => m.Ad)
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Soyad, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Soyad)
+            @Html.ValidationMessageFor(m => m.Soyad)
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.TCKN, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.TCKN)
+            @Html.ValidationMessageFor(m => m.TCKN)
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.DogumTarihi, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.DogumTarihi)
+            @Html.ValidationMessageFor(m => m.DogumTarihi)
+        </div>
+
+    </div>
+
+    <input  type="submit" value="Kaydet"/>
+}
+
+@Html.ActionLink("Personel Listesine Dön","Listele")
