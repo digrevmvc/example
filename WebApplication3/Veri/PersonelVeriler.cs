@@ -14,7 +14,7 @@ namespace WebApplication3.Veri
             {
                 Id=1,
                 Ad="Ali",
-                Soyad="Hazır",
+                Soyad="Hazır asdadad",
                 TCKN =11111111111,
                 DogumTarihi=new DateTime(1990,12,28)
 
